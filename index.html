@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hazy García - Global Learning Studio: instructional design, learning content development, training, and remote-ready education expertise." />
+    <title>Hazy García | Global Learning Studio</title>
+    <style>
+        :root {
+            --primary: #1d4ed8;
+            --secondary: #312e81;
+            --accent: #7c3aed;
+            --dark: #1f2937;
+            --text: #243b53;
+            --muted: #475569;
+            --light: #f4f7fb;
+            --white: #ffffff;
+            --shadow: rgba(15, 23, 42, 0.12);
+        }
+
+        * { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #f7fafc;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .brand {
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 4vw, 4rem);
+            line-height: 1.15;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.35rem);
+            margin-top: 18px;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: rgba(17, 24, 39, 0.96);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: var(--white);
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            transition: background 0.2s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        section {
+            padding: 72px 0;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px var(--shadow);
+            padding: 28px;
+        }
+
+        h2 {
+            margin: 0 0 22px;
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+            color: var(--secondary);
+        }
+
+        p {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 1.02rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: 18px;
+            color: var(--white);
+            padding: 28px;
+            box-shadow: 0 12px 24px rgba(49, 46, 129, 0.22);
+        }
+
+        .highlight-box h3 {
+            margin: 0 0 18px;
+            font-size: 1.4rem;
+        }
+
+        .highlight-box p,
+        .highlight-box li {
+            color: rgba(255,255,255,0.9);
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--muted);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(140px, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .stat {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 14px;
+            padding: 20px 16px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .skill-grid,
+        .project-grid,
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card,
+        .project-card,
+        .service-card {
+            background: var(--white);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
+        }
+
+        .skill-card h3,
+        .project-card h3,
+        .service-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+
+        .project-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        }
+
+        .project-card .tag {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 0.72rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: #eef2ff;
+            color: var(--primary);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-weight: 700;
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+            border: 1px solid #dbeafe;
+            border-radius: 18px;
+            padding: 34px 26px;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 700;
+            box-shadow: 0 10px 18px rgba(124, 58, 237, 0.2);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .contact-links a.secondary {
+            background: var(--secondary);
+        }
+
+        footer {
+            background: #111827;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 26px 0;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid,
+            .skill-grid,
+            .project-grid,
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, minmax(120px, 1fr));
+            }
+        }
+
+        @media (max-width: 540px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 56px 0;
+            }
+
+            .card {
+                padding: 22px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">Global Learning Studio</div>
+            <h1>Hazy García</h1>
+            <p class="subtitle">Instructional Designer & Learning Content Developer</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="card">
+                        <p>I am an instructional designer and learning content developer with 13 years of experience in education and training. I founded and built a language centre in Colombia, accredited by the Ministry of Education, and since 2016 I have designed learning content, coordinated trainers, and translated complex ideas into clear, engaging materials for learners.</p>
+                        <p>I plan projects around clear objectives, coordinate timelines and approvals across teams, and deliver complete learning resources such as manuals, interactive activities, and visual materials. I also configure and train custom AI assistants to support content production efficiently and scale those tools across teams.</p>
+                        <p>My strengths are organization, clarity, bilingual communication, and the ability to turn complex topics into approachable, learner-ready experiences.</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h3>Professional Profile</h3>
+                        <ul>
+                            <li>Instructional designer and training specialist</li>
+                            <li>13 years in education and learning design</li>
+                            <li>Built and led a Ministry-accredited language centre</li>
+                            <li>Experienced in content strategy, coordination, and delivery</li>
+                            <li>Remote-ready, self-directed, and detail-oriented</li>
+                            <li>Trilingual and globally focused</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <strong>13+</strong>
+                        Years in education and training
+                    </div>
+                    <div class="stat">
+                        <strong>1</strong>
+                        Language centre built and accredited
+                    </div>
+                    <div class="stat">
+                        <strong>100%</strong>
+                        Remote-ready and self-managed
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2>Experience & Skills</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <h3>Instructional Design</h3>
+                        <p>Building learning objectives, programs, and pathways aligned to outcomes, learner needs, and operational realities.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Learning Content Development</h3>
+                        <p>Creating manuals, interactive materials, visual resources, and learner-ready content that supports retention and engagement.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Team Coordination</h3>
+                        <p>Managing trainers, timelines, review cycles, and cross-functional collaboration for smooth project execution.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Project Planning</h3>
+                        <p>Structuring delivery plans, defining milestones, and keeping products aligned with both quality and deadlines.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>AI Learning Tools</h3>
+                        <p>Configuring custom AI assistants to improve content production and support scalable learning workflows.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Global Communication</h3>
+                        <p>Delivering bilingual, culturally-aware learning experiences designed for international and remote environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <span class="tag">Language Learning</span>
+                        <h3>Explore the Word</h3>
+                        <p>A learning experience focused on vocabulary, practical communication, and context-based language discovery.</p>
+                    </div>
+                    <div class="project-card">
+                        <span class="tag">Travel & Culture</span>
+                        <h3>World Voyagers</h3>
+                        <p>An immersive language project that brings travel and cultural exploration into real-life communication practice.</p>
+                    </div>
+                    <div class="project-card">
+                        <span class="tag">Fluency</span>
+                        <h3>Speak Faster</h3>
+                        <p>A performance-focused language program designed to build speaking confidence, rhythm, and fluency through practice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>How I Can Help</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>Custom Learning Design</h3>
+                        <p>Development of structured learning experiences tailored to your audience, outcomes, and delivery goals.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Course & Manual Development</h3>
+                        <p>Creation of manuals, activities, resources, and visual materials that are clear, engaging, and learner-focused.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Trainer Coordination</h3>
+                        <p>Managing training teams, project timelines, and quality assurance to keep learning delivery consistent.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>AI Content Support</h3>
+                        <p>Setting up AI-powered workflows to streamline content creation without losing quality or clarity.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Program Strategy</h3>
+                        <p>Planning learning initiatives from concept to implementation with measurable objectives and practical structure.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Remote Learning Solutions</h3>
+                        <p>Designing fully remote-ready educational materials and systems that support access and consistency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="cta">
+                    <h2>Let’s Build Better Learning Experiences</h2>
+                    <p>I help organizations and teams transform complex information into engaging, effective learning resources.</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@globallearningstudio.com">Email</a>
+                        <a href="https://www.linkedin.com" class="secondary" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://github.com/hazy-boop" class="secondary" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 Hazy García | Global Learning Studio</div>
+    </footer>
+</body>
+</html>
