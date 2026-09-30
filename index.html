@@ -7,40 +7,30 @@
     <title>Hazy García | Global Learning Studio</title>
     <style>
         :root {
-            --primary: #1d4ed8;
-            --secondary: #312e81;
-            --accent: #7c3aed;
-            --dark: #1f2937;
-            --text: #243b53;
-            --muted: #475569;
-            --light: #f4f7fb;
+            --navy: #0f1f3d;
+            --navy-2: #1d3557;
+            --gold: #c9a55c;
+            --gold-soft: #e8d7a1;
+            --ivory: #f8f5f1;
             --white: #ffffff;
+            --text: #243b53;
+            --muted: #5b6473;
+            --border: #e8e6e1;
+            --bg: #f5f3ee;
             --shadow: rgba(15, 23, 42, 0.12);
         }
 
         * { box-sizing: border-box; }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html { scroll-behavior: smooth; }
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.7;
             color: var(--text);
-            background: #f7fafc;
+            background: var(--bg);
         }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
 
         .container {
             width: min(1120px, calc(100% - 32px));
@@ -48,59 +38,146 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
             color: var(--white);
-            padding: 80px 0 60px;
-            text-align: center;
+            padding: 18px 0;
         }
 
-        .brand {
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            opacity: 0.9;
-            margin-bottom: 14px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: clamp(2.2rem, 4vw, 4rem);
-            line-height: 1.15;
-            font-weight: 800;
-        }
-
-        .subtitle {
-            font-size: clamp(1rem, 2vw, 1.35rem);
-            margin-top: 18px;
-            opacity: 0.95;
-        }
-
-        nav {
-            background: rgba(17, 24, 39, 0.96);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        nav .container {
+        .header-inner {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding: 10px 0;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
         }
 
-        nav a {
-            color: var(--white);
-            padding: 10px 14px;
+        .brand-wrap {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand-logo {
+            width: 76px;
+            height: 76px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(201,165,92,0.5);
+            border-radius: 18px;
+            padding: 8px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-text strong {
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            letter-spacing: 0.04em;
+        }
+
+        .brand-text span {
+            color: var(--gold-soft);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .nav {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav a {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.92rem;
+            padding: 10px 12px;
             border-radius: 999px;
-            font-size: 0.95rem;
             transition: background 0.2s ease;
         }
 
-        nav a:hover {
+        .nav a:hover {
             background: rgba(255,255,255,0.08);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(15,31,61,0.97), rgba(29,53,87,0.96));
+            color: var(--white);
+            padding: 52px 0 36px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 26px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold-soft);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: clamp(2.3rem, 5vw, 4.3rem);
+            line-height: 1.06;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            color: rgba(255,255,255,0.86);
+            margin: 0;
+            max-width: 700px;
+        }
+
+        .profile-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(201,165,92,0.4);
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.14);
+        }
+
+        .photo-box {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #d0d8e6, #e7e5e1 60%, #d4c5ae);
+            border: 2px solid rgba(201,165,92,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-label {
+            position: absolute;
+            left: 14px;
+            bottom: 12px;
+            background: rgba(15,31,61,0.8);
+            color: var(--white);
+            font-size: 0.8rem;
+            padding: 7px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(201,165,92,0.6);
         }
 
         section {
@@ -109,45 +186,45 @@
 
         .card {
             background: var(--white);
-            border: 1px solid #e5e7eb;
-            border-radius: 18px;
-            box-shadow: 0 12px 30px var(--shadow);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 12px 28px var(--shadow);
             padding: 28px;
         }
 
         h2 {
             margin: 0 0 22px;
-            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-            color: var(--secondary);
+            font-size: clamp(1.85rem, 2.4vw, 2.5rem);
+            color: var(--navy);
         }
 
         p {
             margin: 0 0 18px;
             color: var(--muted);
-            font-size: 1.02rem;
+            font-size: 1.04rem;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 28px;
+            gap: 26px;
             align-items: start;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            border-radius: 18px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+            border-radius: 20px;
             color: var(--white);
             padding: 28px;
-            box-shadow: 0 12px 24px rgba(49, 46, 129, 0.22);
+            box-shadow: 0 12px 24px rgba(15,31,61,0.18);
         }
 
         .highlight-box h3 {
             margin: 0 0 18px;
+            color: var(--gold-soft);
             font-size: 1.4rem;
         }
 
-        .highlight-box p,
         .highlight-box li {
             color: rgba(255,255,255,0.9);
         }
@@ -166,27 +243,25 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(140px, 1fr));
             gap: 18px;
-            margin-top: 24px;
+            margin-top: 22px;
         }
 
         .stat {
-            background: #eff6ff;
-            border: 1px solid #dbeafe;
+            background: linear-gradient(180deg, #f8f3e8, #fff);
+            border: 1px solid rgba(201,165,92,0.4);
             border-radius: 14px;
-            padding: 20px 16px;
+            padding: 20px 18px;
             text-align: center;
         }
 
         .stat strong {
             display: block;
-            font-size: 1.6rem;
-            color: var(--primary);
+            font-size: 1.65rem;
+            color: var(--navy);
             margin-bottom: 8px;
         }
 
-        .skill-grid,
-        .project-grid,
-        .service-grid {
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, minmax(220px, 1fr));
             gap: 24px;
@@ -196,8 +271,8 @@
         .project-card,
         .service-card {
             background: var(--white);
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
             padding: 22px;
             box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
         }
@@ -206,44 +281,29 @@
         .project-card h3,
         .service-card h3 {
             margin: 0 0 10px;
+            color: var(--navy);
             font-size: 1.2rem;
-            color: var(--secondary);
-        }
-
-        .project-card {
-            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
         }
 
         .project-card .tag {
             display: inline-block;
             margin-bottom: 12px;
-            font-size: 0.72rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            background: #eef2ff;
-            color: var(--primary);
-            border-radius: 999px;
             padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(201,165,92,0.14);
+            color: var(--navy);
+            font-size: 0.72rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
 
         .cta {
+            background: linear-gradient(135deg, #f9f6f0, #f4f7fb);
+            border: 1px solid rgba(201,165,92,0.3);
+            border-radius: 20px;
             text-align: center;
-            background: linear-gradient(135deg, #eff6ff, #f5f3ff);
-            border: 1px solid #dbeafe;
-            border-radius: 18px;
             padding: 34px 26px;
-        }
-
-        .cta a {
-            display: inline-block;
-            margin-top: 8px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: var(--white);
-            padding: 14px 28px;
-            border-radius: 999px;
-            font-weight: 700;
-            box-shadow: 0 10px 18px rgba(124, 58, 237, 0.2);
         }
 
         .contact-links {
@@ -256,7 +316,7 @@
 
         .contact-links a {
             display: inline-block;
-            background: var(--primary);
+            background: var(--navy);
             color: var(--white);
             padding: 12px 20px;
             border-radius: 999px;
@@ -264,62 +324,66 @@
         }
 
         .contact-links a.secondary {
-            background: var(--secondary);
+            background: var(--gold);
+            color: var(--navy);
         }
 
         footer {
             background: #111827;
             color: rgba(255,255,255,0.8);
             text-align: center;
-            padding: 26px 0;
+            padding: 24px 0;
         }
 
         @media (max-width: 900px) {
-            .about-grid,
-            .skill-grid,
-            .project-grid,
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, minmax(120px, 1fr));
-            }
+            .header-inner { display: grid; justify-items: center; text-align: center; }
+            .hero-grid, .about-grid, .grid-3 { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, minmax(120px,1fr)); }
         }
 
         @media (max-width: 540px) {
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 56px 0;
-            }
-
-            .card {
-                padding: 22px 18px;
-            }
+            .stats { grid-template-columns: 1fr; }
+            section { padding: 58px 0; }
+            .card { padding: 22px 18px; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="brand">Global Learning Studio</div>
-            <h1>Hazy García</h1>
-            <p class="subtitle">Instructional Designer & Learning Content Developer</p>
+        <div class="container header-inner">
+            <div class="brand-wrap">
+                <img class="brand-logo" src="assets/logo.svg" alt="Global Learning Studio logo" />
+                <div class="brand-text">
+                    <strong>Hazy García</strong>
+                    <span>Global Learning Studio</span>
+                </div>
+            </div>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="eyebrow">Instructional Designer &amp; Learning Content Developer</div>
+                <h1>Building clear, engaging learning experiences.</h1>
+                <p>I help teams turn complex ideas into learner-ready content, structured programs, and impactful training experiences that connect with people and drive results.</p>
+            </div>
+
+            <div class="profile-card">
+                <div class="photo-box">
+                    <img src="assets/profile-photo.jpg" alt="Hazy García portrait" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #dfe7f4, #e9e2d8)'; this.parentElement.insertAdjacentHTML('beforeend', '<div style=\'font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #1d3557; font-weight: 700; text-align: center;\'>Add profile photo</div>');" />
+                    <div class="photo-label">Portrait</div>
+                </div>
+            </div>
         </div>
-    </nav>
+    </section>
 
     <main>
         <section id="about">
@@ -346,26 +410,17 @@
                 </div>
 
                 <div class="stats">
-                    <div class="stat">
-                        <strong>13+</strong>
-                        Years in education and training
-                    </div>
-                    <div class="stat">
-                        <strong>1</strong>
-                        Language centre built and accredited
-                    </div>
-                    <div class="stat">
-                        <strong>100%</strong>
-                        Remote-ready and self-managed
-                    </div>
+                    <div class="stat"><strong>13+</strong>Years in education</div>
+                    <div class="stat"><strong>1</strong>Language centre built</div>
+                    <div class="stat"><strong>100%</strong>Remote-ready</div>
                 </div>
             </div>
         </section>
 
         <section id="experience">
             <div class="container">
-                <h2>Experience & Skills</h2>
-                <div class="skill-grid">
+                <h2>Experience &amp; Skills</h2>
+                <div class="grid-3">
                     <div class="skill-card">
                         <h3>Instructional Design</h3>
                         <p>Building learning objectives, programs, and pathways aligned to outcomes, learner needs, and operational realities.</p>
@@ -397,21 +452,21 @@
         <section id="projects">
             <div class="container">
                 <h2>Featured Projects</h2>
-                <div class="project-grid">
+                <div class="grid-3">
                     <div class="project-card">
                         <span class="tag">Language Learning</span>
                         <h3>Explore the Word</h3>
-                        <p>A learning experience focused on vocabulary, practical communication, and context-based language discovery.</p>
+                        <p>A language learning program focused on vocabulary, practical communication, and real-world exploration.</p>
                     </div>
                     <div class="project-card">
-                        <span class="tag">Travel & Culture</span>
+                        <span class="tag">Travel &amp; Culture</span>
                         <h3>World Voyagers</h3>
-                        <p>An immersive language project that brings travel and cultural exploration into real-life communication practice.</p>
+                        <p>An immersive language project that combines travel and cultural understanding with communication practice.</p>
                     </div>
                     <div class="project-card">
                         <span class="tag">Fluency</span>
                         <h3>Speak Faster</h3>
-                        <p>A performance-focused language program designed to build speaking confidence, rhythm, and fluency through practice.</p>
+                        <p>An accelerated speaking program designed to improve confidence, clarity, and fluency through practice.</p>
                     </div>
                 </div>
             </div>
@@ -420,13 +475,13 @@
         <section id="services">
             <div class="container">
                 <h2>How I Can Help</h2>
-                <div class="service-grid">
+                <div class="grid-3">
                     <div class="service-card">
                         <h3>Custom Learning Design</h3>
                         <p>Development of structured learning experiences tailored to your audience, outcomes, and delivery goals.</p>
                     </div>
                     <div class="service-card">
-                        <h3>Course & Manual Development</h3>
+                        <h3>Course &amp; Manual Development</h3>
                         <p>Creation of manuals, activities, resources, and visual materials that are clear, engaging, and learner-focused.</p>
                     </div>
                     <div class="service-card">
