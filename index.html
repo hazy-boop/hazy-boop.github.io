@@ -3,27 +3,646 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hazy García — instructional designer and learning content developer specialising in learner-centred training and modern teaching practice." />
+  <meta name="description" content="Hazy García — instructional designer and learning content developer specialising in learner-centred training." />
   <title>Hazy García | Global Learning Studio</title>
   <style>
-    :root{--navy:#0f1f3d;--navy2:#1d3557;--gold:#c9a55c;--gold2:#e8d7a1;--bg:#f5f3ee;--white:#fff;--text:#243b53;--muted:#5b6473;--border:#e8e6e1;--shadow:rgba(15,23,42,.12)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.7;color:var(--text);background:var(--bg)}a{color:inherit;text-decoration:none}.container{width:min(1140px,calc(100% - 36px));margin:auto}
-    header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--white);padding:18px 0}.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand-wrap{display:flex;align-items:center;gap:16px}.brand-logo{width:78px;height:78px;background:#ffffff0a;border:1px solid #c9a55c8c;border-radius:18px;padding:8px}.brand-text{display:flex;flex-direction:column;gap:2px}.brand-text strong{font-size:clamp(1.2rem,2vw,1.8rem);letter-spacing:.04em}.brand-text span{color:var(--gold2);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em}.nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}.nav a{color:#ffffffeb;font-size:.92rem;padding:10px 12px;border-radius:999px}.nav a:hover{background:#ffffff14}
-    .hero{background:linear-gradient(135deg,#0f1f3df7,#1d3557f5);color:var(--white);padding:58px 0 38px}.hero-grid{display:grid;grid-template-columns:1.38fr .62fr;gap:28px;align-items:center}.eyebrow{display:inline-block;color:var(--gold2);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}h1{margin:0 0 18px;font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.06;letter-spacing:-.02em}.hero p{font-size:1.08rem;color:#ffffffdc;margin:0;max-width:700px}.profile-card{background:#ffffff0f;border:1px solid #c9a55c73;border-radius:24px;padding:20px;box-shadow:0 15px 30px #00000024}.photo-box{width:100%;aspect-ratio:4/5;border-radius:18px;background:linear-gradient(135deg,#d0d8e6,#e7e5e1 60%,#d4c5ae);border:2px solid #c9a55cb3;overflow:hidden;position:relative}.photo-box img{width:100%;height:100%;object-fit:cover}.photo-label{position:absolute;left:14px;bottom:12px;background:#0f1f3dcc;color:#fff;font-size:.8rem;padding:7px 10px;border-radius:999px;border:1px solid #c9a55c99}
-    section{padding:72px 0}h2{margin:0 0 22px;font-size:clamp(1.9rem,2.5vw,2.6rem);color:var(--navy)}h3{color:var(--navy)}p{margin:0 0 18px;color:var(--muted);font-size:1.04rem}.card,.skill-card,.project-card,.service-card{background:var(--white);border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:0 10px 22px #0f172a0a}.about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:26px}.highlight-box{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:20px;color:#fff;padding:30px;box-shadow:0 12px 24px #0f1f3d2e}.highlight-box h3{margin:0 0 18px;color:var(--gold2)}li{margin-bottom:10px;color:var(--muted)}.highlight-box li{color:#ffffffe6}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.stat{background:linear-gradient(180deg,#f8f3e8,#fff);border:1px solid #c9a55c66;border-radius:14px;padding:20px;text-align:center}.stat strong{display:block;font-size:1.65rem;color:var(--navy);margin-bottom:8px}.grid-4{display:grid;grid-template-columns:repeat(4,minmax(200px,1fr));gap:24px}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:24px}.skill-card h3,.project-card h3,.service-card h3{margin:0 0 10px;font-size:1.2rem}.project-card .tag{display:inline-block;margin-bottom:12px;padding:6px 10px;border-radius:999px;background:#c9a55c24;color:var(--navy);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.project-card.featured{border-color:#c9a55c99;box-shadow:0 14px 30px #0f1f3d1a}.project-detail{margin-top:30px;background:linear-gradient(135deg,#f9f6f0,#f4f7fb);border:1px solid #c9a55c4d;border-radius:20px;padding:30px}.project-detail h3{margin-top:0}.project-detail ul{padding-left:22px}.cta{background:linear-gradient(135deg,#f9f6f0,#f4f7fb);border:1px solid #c9a55c4d;border-radius:20px;text-align:center;padding:34px 26px}.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:18px}.contact-links a{background:var(--navy);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600}.contact-links a.secondary{background:var(--gold);color:var(--navy)}footer{background:#111827;color:#ffffffcc;text-align:center;padding:24px 0}
-    @media(max-width:900px){.header-inner{display:grid;justify-items:center;text-align:center}.hero-grid,.about-grid,.grid-3,.grid-4{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){.stats{grid-template-columns:1fr}section{padding:58px 0}.card{padding:22px 18px}}
+    :root {
+      --navy: #0f1f3d;
+      --navy2: #1d3557;
+      --gold: #c9a55c;
+      --gold2: #e8d7a1;
+      --bg: #f5f3ee;
+      --white: #ffffff;
+      --text: #243b53;
+      --muted: #5b6473;
+      --border: #e8e6e1;
+      --shadow: rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; }
+
+    .container {
+      width: min(1140px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      color: var(--white);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      width: 78px;
+      height: 78px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,165,92,0.5);
+      border-radius: 18px;
+      padding: 8px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-text strong {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      letter-spacing: 0.04em;
+    }
+
+    .brand-text span {
+      color: var(--gold2);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav a {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.9rem;
+      padding: 10px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .lang-selector {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+
+    .lang-btn {
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(15,31,61,0.97), rgba(29,53,87,0.96));
+      color: var(--white);
+      padding: 58px 0 38px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.38fr 0.62fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold2);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+      max-width: 700px;
+    }
+
+    .profile-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,165,92,0.4);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.14);
+    }
+
+    .photo-box {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #d0d8e6, #e7e5e1 60%, #d4c5ae);
+      border: 2px solid rgba(201,165,92,0.7);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-label {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      background: rgba(15,31,61,0.8);
+      color: var(--white);
+      font-size: 0.8rem;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,165,92,0.6);
+    }
+
+    .window {
+      display: none;
+      padding: 50px 0;
+    }
+
+    .window.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: clamp(1.9rem, 2.5vw, 2.6rem);
+      color: var(--navy);
+    }
+
+    h3 {
+      color: var(--navy);
+      margin: 20px 0 12px;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .card,
+    .skill-card,
+    .project-card,
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.04);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 26px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      border-radius: 20px;
+      color: #fff;
+      padding: 30px;
+      box-shadow: 0 12px 24px rgba(15,31,61,0.18);
+    }
+
+    .highlight-box h3 {
+      margin: 0 0 18px;
+      color: var(--gold2);
+      font-size: 1.4rem;
+    }
+
+    .highlight-box li {
+      color: rgba(255,255,255,0.92);
+    }
+
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 10px; color: var(--muted); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: linear-gradient(180deg, #f8f3e8, #fff);
+      border: 1px solid rgba(201,165,92,0.4);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.65rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-card h3,
+    .project-card h3,
+    .service-card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+
+    .project-card .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(201,165,92,0.14);
+      color: var(--navy);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-card.featured {
+      border-color: rgba(201,165,92,0.6);
+      box-shadow: 0 14px 30px rgba(15,31,61,0.08);
+    }
+
+    .project-detail {
+      margin-top: 30px;
+      background: linear-gradient(135deg, #f9f6f0, #f4f7fb);
+      border: 1px solid rgba(201,165,92,0.33);
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #f9f6f0, #f4f7fb);
+      border: 1px solid rgba(201,165,92,0.3);
+      border-radius: 20px;
+      text-align: center;
+      padding: 34px 26px;
+      margin: 30px 0 60px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .contact-links a.secondary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 30px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    footer {
+      background: #111827;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 24px 0;
+    }
+
+    @media (max-width: 900px) {
+      .header-inner { display: grid; justify-items: center; text-align: center; }
+      .hero-grid, .about-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .lang-selector { margin-left: 0; margin-top: 10px; }
+    }
+
+    @media (max-width: 540px) {
+      .stats { grid-template-columns: 1fr; }
+      .window { padding: 30px 0; }
+      .card { padding: 22px 18px; }
+    }
   </style>
 </head>
 <body>
-  <header><div class="container header-inner"><div class="brand-wrap"><img class="brand-logo" src="assets/logo.svg" alt="Global Learning Studio logo"><div class="brand-text"><strong>Hazy García</strong><span>Global Learning Studio</span></div></div><nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div></header>
-  <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Instructional Designer &amp; Learning Content Developer</div><h1>Building clear, engaging learning experiences.</h1><p>I help teams turn complex ideas into learner-ready content, structured programmes, and impactful training experiences that connect with people and drive results.</p></div><div class="profile-card"><div class="photo-box"><img src="assets/profile-photo.jpg" alt="Hazy García portrait"><div class="photo-label">Portrait</div></div></div></div></section>
-  <main>
-    <section id="about"><div class="container"><h2>About Me</h2><div class="about-grid"><div class="card"><p>I am an instructional designer and learning content developer with 13 years of experience in education and training. I founded and built a language centre in Colombia, accredited by the Ministry of Education, and since 2016 I have designed learning content, coordinated trainers, and translated complex ideas into clear, engaging materials for learners.</p><p>I plan projects around clear objectives, coordinate timelines and approvals across teams, and deliver complete learning resources such as manuals, interactive activities, and visual materials. I also configure and train custom AI assistants to support content production efficiently.</p><p>My strengths are organisation, clarity, bilingual communication, and the ability to turn complex topics into approachable, learner-ready experiences.</p></div><div class="highlight-box"><h3>Professional Profile</h3><ul><li>Instructional designer and training specialist</li><li>13 years in education and learning design</li><li>Built and led a Ministry-accredited language centre</li><li>Experienced in content strategy, coordination, and delivery</li><li>Remote-ready, self-directed, and detail-oriented</li><li>Trilingual and globally focused</li></ul></div></div><div class="stats"><div class="stat"><strong>13+</strong>Years in education</div><div class="stat"><strong>1</strong>Language centre built</div><div class="stat"><strong>100%</strong>Remote-ready</div></div></div></section>
-    <section id="experience"><div class="container"><h2>Experience &amp; Skills</h2><div class="grid-3"><div class="skill-card"><h3>Instructional Design</h3><p>Building learning objectives, programmes, and pathways aligned to outcomes and learner needs.</p></div><div class="skill-card"><h3>Learning Content Development</h3><p>Creating manuals, interactive materials, visual resources, and learner-ready content.</p></div><div class="skill-card"><h3>Team Coordination</h3><p>Managing trainers, timelines, review cycles, and cross-functional collaboration.</p></div><div class="skill-card"><h3>Project Planning</h3><p>Structuring delivery plans, milestones, approvals, and quality assurance.</p></div><div class="skill-card"><h3>AI Learning Tools</h3><p>Configuring custom AI assistants to improve content production and learning workflows.</p></div><div class="skill-card"><h3>Global Communication</h3><p>Delivering bilingual, culturally aware learning experiences for international environments.</p></div></div></div></section>
-    <section id="projects"><div class="container"><h2>Featured Projects</h2><div class="grid-4"><div class="project-card featured"><span class="tag">Teacher Development</span><h3>Modern Teaching Philosophies</h3><p>Professional training resource for language tutors at inlingua Terni.</p><a href="#modern-teaching">View details →</a></div><div class="project-card featured"><span class="tag">Young Learners</span><h3>Little Learners of English</h3><p>Trainer’s guide for teaching English as a foreign language to children aged 3–8.</p><a href="#little-learners">View details →</a></div><div class="project-card"><span class="tag">Language Learning</span><h3>Explore the Word</h3><p>A language learning programme focused on vocabulary, practical communication, and real-world exploration.</p></div><div class="project-card"><span class="tag">Travel &amp; Culture</span><h3>World Voyagers</h3><p>An immersive language project combining travel and cultural understanding with communication practice.</p></div></div><article id="modern-teaching" class="project-detail"><h3>Modern Teaching Philosophies</h3><p><strong>Author:</strong> Hazbleidy García · <strong>Format:</strong> Training handbook / educational resource · <strong>Year:</strong> 2025</p><p>This professional training resource was created for inlingua Terni and designed to equip language tutors and trainers with practical skills, reflective strategies, and modern methodological tools for learner-centred, communicative teaching.</p><p>The material combines theory with hands-on practice through observation, peer collaboration, and scenario-based decision-making. It draws on active learning, inlingua DICE methodology, and the Agile Learning Cycle to help participants apply classroom principles in authentic teaching contexts.</p><h3>Objectives</h3><ul><li>Apply a learner-centred approach by placing learners at the centre of instruction.</li><li>Identify and analyse learner needs through observation, diagnostics, and short interviews.</li><li>Use active learning strategies to promote problem-solving, interaction, and higher-order thinking.</li><li>Deliver structured, communicative lessons with clear instructions, ICQs, CCQs, scaffolding, and feedback.</li><li>Reflect on teaching practice and demonstrate competence through micro-teaching.</li><li>Promote inclusive, sustainable, and quality education aligned with international teaching standards.</li></ul><h3>Core content</h3><ul><li>Learner-centred approach and active learning philosophy</li><li>Learner needs analysis and diagnosis</li><li>Step-by-step lesson delivery frameworks</li><li>Classroom communication: instructions, checking understanding, error correction</li><li>Mistakes versus errors: identification and response</li><li>Teacher roles and professional responsibilities</li><li>Modern teaching approaches and lesson planning</li><li>inlingua DICE methodology</li><li>Micro-teaching practice and reflection</li></ul></article><article id="little-learners" class="project-detail"><h3>Little Learners of English as a Foreign Language</h3><p><strong>Format:</strong> Trainer’s guide / teaching resource · <strong>Target audience:</strong> Teachers of children aged 3–8</p><p>A trainer’s guide to teaching English as a Foreign Language (EFL) to children aged 3 to 8, using English as the language of the classroom. The guide provides a practical, child-centred framework for planning and delivering engaging lessons in English.</p><h3>Purpose</h3><p>The guide supports trainers in creating an immersive classroom environment where young learners develop confidence, understanding, and communication skills through age-appropriate activities, routines, stories, and interaction.</p><h3>Four-step teaching framework</h3><ol><li><strong>Prepare:</strong> Plan clear aims, routines, language, materials, and activities appropriate for the children’s age and level.</li><li><strong>Introduce:</strong> Set the context, model the language, and use gestures, visuals, songs, and stories to make meaning clear.</li><li><strong>Practise:</strong> Give children opportunities to use English through games, role play, stories, repetition, movement, and guided interaction.</li><li><strong>Reflect and extend:</strong> Observe learning, check understanding, revisit language, and adapt future lessons to support each child’s progress.</li></ol><h3>Key features</h3><ul><li>English as the language of the classroom</li><li>Child-centred and age-appropriate lesson design</li><li>Stories, songs, games, routines, and interactive activities</li><li>Clear classroom language and practical guidance for trainers</li><li>Scaffolding and repetition to support early language development</li><li>Observation-based assessment of children’s participation and progress</li></ul></article></div></section>
-    <section id="services"><div class="container"><h2>How I Can Help</h2><div class="grid-3"><div class="service-card"><h3>Custom Learning Design</h3><p>Structured learning experiences tailored to your audience, outcomes, and delivery goals.</p></div><div class="service-card"><h3>Course &amp; Manual Development</h3><p>Clear, engaging manuals, activities, resources, and visual materials.</p></div><div class="service-card"><h3>Trainer Coordination</h3><p>Training-team coordination, project timelines, and quality assurance.</p></div><div class="service-card"><h3>AI Content Support</h3><p>AI-powered workflows that streamline content creation without losing quality.</p></div><div class="service-card"><h3>Programme Strategy</h3><p>Learning initiatives planned from concept to implementation.</p></div><div class="service-card"><h3>Remote Learning Solutions</h3><p>Remote-ready educational materials and systems that support access and consistency.</p></div></div></div></section>
-    <section id="contact"><div class="container"><div class="cta"><h2>Let's Build Better Learning Experiences</h2><p>I help organisations and teams transform complex information into engaging, effective learning resources.</p><div class="contact-links"><a href="mailto:hazbleidy0107@gmail.com">Email</a><a href="https://www.linkedin.com/in/hazbleidygr/?isSelfProfile=true" class="secondary" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/hazy-boop" class="secondary" target="_blank" rel="noreferrer">GitHub</a></div></div></div></section>
+  <header>
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <img class="brand-logo" src="assets/logo.svg" alt="Global Learning Studio logo" />
+        <div class="brand-text">
+          <strong>Hazy García</strong>
+          <span>Global Learning Studio</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a onclick="showWindow('about')" data-en="About" data-es="Sobre mí" data-it="Chi sono">About</a>
+        <a onclick="showWindow('history')" data-en="History" data-es="Historia" data-it="Storia">History</a>
+        <a onclick="showWindow('mission')" data-en="Mission & Vision" data-es="Misión y Visión" data-it="Missione e Visione">Mission & Vision</a>
+        <a onclick="showWindow('projects')" data-en="Projects" data-es="Proyectos" data-it="Progetti">Projects</a>
+        <a onclick="showWindow('services')" data-en="Services" data-es="Servicios" data-it="Servizi">Services</a>
+        <a onclick="showWindow('contact')" data-en="Contact" data-es="Contacto" data-it="Contatti">Contact</a>
+      </nav>
+
+      <div class="lang-selector">
+        <button class="lang-btn active" type="button" data-lang="en">EN</button>
+        <button class="lang-btn" type="button" data-lang="es">ES</button>
+        <button class="lang-btn" type="button" data-lang="it">IT</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow" data-en="Instructional Designer & Learning Content Developer" data-es="Diseñadora Instruccional y Desarrolladora de Contenido de Aprendizaje" data-it="Designer Istruzionale e Sviluppatrice di Contenuti Educativi">Instructional Designer & Learning Content Developer</div>
+        <h1 data-en="Building clear, engaging learning experiences." data-es="Construyendo experiencias de aprendizaje claras e impactantes." data-it="Costruire esperienze di apprendimento chiare e coinvolgenti.">Building clear, engaging learning experiences.</h1>
+        <p data-en="I help teams turn complex ideas into learner-ready content, structured programmes, and impactful training experiences that connect with people and drive results." data-es="Ayudo a los equipos a transformar ideas complejas en contenido listo para los estudiantes, programas estructurados y experiencias de capacitación impactantes que conectan con las personas y impulsan resultados." data-it="Aiuto i team a trasformare idee complesse in contenuti pronti per gli studenti, programmi strutturati ed esperienze di formazione impattanti che si collegano alle persone e producono risultati.">I help teams turn complex ideas into learner-ready content, structured programmes, and impactful training experiences that connect with people and drive results.</p>
+      </div>
+
+      <div class="profile-card">
+        <div class="photo-box">
+          <img src="assets/profile-photo.jpg" alt="Hazy García portrait" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #dfe7f4, #e9e2d7 60%, #d7c5aa)';" />
+          <div class="photo-label">Portrait</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div id="about" class="window active">
+      <h2 data-en="About Me" data-es="Sobre Mí" data-it="Chi sono">About Me</h2>
+      <div class="about-grid">
+        <div class="card">
+          <p data-en="I am an instructional designer and learning content developer with 13 years of experience in education and training. I founded and built a language centre in Colombia, accredited by the Ministry of Education, and since 2016 I have designed learning content, coordinated trainers, and translated complex ideas into clear, engaging materials for learners." data-es="Soy diseñadora instruccional y desarrolladora de contenido de aprendizaje con 13 años de experiencia en educación y capacitación. Fundé y construí un centro de idiomas en Colombia, acreditado por el Ministerio de Educación, y desde 2016 he diseñado contenido de aprendizaje, coordinado entrenadores y traducido ideas complejas en materiales claros y atractivos para los estudiantes." data-it="Sono una designer istruzionale e sviluppatrice di contenuti educativi con 13 anni di esperienza in educazione e formazione. Ho fondato e costruito un centro linguistico in Colombia, accreditato dal Ministero dell'Istruzione, e dal 2016 ho progettato contenuti educativi, coordinato formatori e tradotto idee complesse in materiali chiari e coinvolgenti per gli studenti.">I am an instructional designer and learning content developer with 13 years of experience in education and training. I founded and built a language centre in Colombia, accredited by the Ministry of Education, and since 2016 I have designed learning content, coordinated trainers, and translated complex ideas into clear, engaging materials for learners.</p>
+          <p data-en="I plan projects around clear objectives, coordinate timelines and approvals across teams, and deliver complete learning resources such as manuals, interactive activities, and visual materials. I also configure and train custom AI assistants to support content production efficiently." data-es="Planeo proyectos alrededor de objetivos claros, coordino cronogramas y aprobaciones entre equipos, y entrego recursos de aprendizaje completos como manuales, actividades interactivas y materiales visuales. También configuro y capacito asistentes de IA personalizados para apoyar la producción de contenido de manera eficiente." data-it="Pianifico progetti attorno a obiettivi chiari, coordino tempistiche e approvazioni tra i team, e consegno risorse educative complete come manuali, attività interattive e materiali visivi. Configuro anche e addestro assistenti IA personalizzati per supportare la produzione di contenuti in modo efficiente.">I plan projects around clear objectives, coordinate timelines and approvals across teams, and deliver complete learning resources such as manuals, interactive activities, and visual materials. I also configure and train custom AI assistants to support content production efficiently.</p>
+          <p data-en="My strengths are organisation, clarity, bilingual communication, and the ability to turn complex topics into approachable, learner-ready experiences." data-es="Mis fortalezas son la organización, la claridad, la comunicación bilingüe y la capacidad de convertir temas complejos en experiencias accesibles y listas para los estudiantes." data-it="I miei punti di forza sono l'organizzazione, la chiarezza, la comunicazione bilingue e la capacità di trasformare argomenti complessi in esperienze accessibili e pronte per gli studenti.">My strengths are organisation, clarity, bilingual communication, and the ability to turn complex topics into approachable, learner-ready experiences.</p>
+        </div>
+
+        <div class="highlight-box">
+          <h3 data-en="Professional Profile" data-es="Perfil Profesional" data-it="Profilo Professionale">Professional Profile</h3>
+          <ul>
+            <li data-en="Instructional designer and training specialist" data-es="Diseñadora instruccional y especialista en capacitación" data-it="Designer istruzionale e specialista di formazione">Instructional designer and training specialist</li>
+            <li data-en="13 years in education and learning design" data-es="13 años en educación y diseño de aprendizaje" data-it="13 anni in educazione e progettazione didattica">13 years in education and learning design</li>
+            <li data-en="Built and led a Ministry-accredited language centre" data-es="Construí y dirigí un centro de idiomas acreditado por el Ministerio" data-it="Ho costruito e diretto un centro linguistico accreditato dal Ministero">Built and led a Ministry-accredited language centre</li>
+            <li data-en="Experienced in content strategy, coordination, and delivery" data-es="Experimentada en estrategia de contenido, coordinación y entrega" data-it="Esperta in strategia dei contenuti, coordinamento e consegna">Experienced in content strategy, coordination, and delivery</li>
+            <li data-en="Remote-ready, self-directed, and detail-oriented" data-es="Lista para trabajar remotamente, autodirigida y orientada a los detalles" data-it="Pronta per il lavoro remoto, autodiretta e orientata ai dettagli">Remote-ready, self-directed, and detail-oriented</li>
+            <li data-en="Trilingual and globally focused" data-es="Trilingüe y enfocada globalmente" data-it="Trilingue e focalizzata globalmente">Trilingual and globally focused</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>13+</strong><span data-en="Years in education" data-es="Años en educación" data-it="Anni in educazione">Years in education</span></div>
+        <div class="stat"><strong>1</strong><span data-en="Language centre built" data-es="Centro de idiomas construido" data-it="Centro linguistico costruito">Language centre built</span></div>
+        <div class="stat"><strong>100%</strong><span data-en="Remote-ready" data-es="Listo para remoto" data-it="Pronto per remoto">Remote-ready</span></div>
+      </div>
+    </div>
+
+    <div id="history" class="window">
+      <h2 data-en="My Journey" data-es="Mi Viaje" data-it="Il Mio Percorso">My Journey</h2>
+      <div class="card">
+        <h3 data-en="From Education to Training Design" data-es="De la Educación al Diseño de Capacitación" data-it="Dall'Educazione al Design Formativo">From Education to Training Design</h3>
+        <p data-en="My career began in the classroom, where I discovered the transformative power of clear communication and learner-centred teaching. In 2009, I founded a language centre in Colombia with a vision to create an inclusive, high-quality learning environment accredited by the Ministry of Education." data-es="Mi carrera comenzó en el aula, donde descubrí el poder transformador de la comunicación clara y la enseñanza centrada en el estudiante. En 2009, fundé un centro de idiomas en Colombia con la visión de crear un entorno de aprendizaje inclusivo y de alta calidad acreditado por el Ministerio de Educación." data-it="La mia carriera è iniziata in aula, dove ho scoperto il potere trasformativo della comunicazione chiara e dell'insegnamento centrato sull'allievo. Nel 2009 ho fondato un centro linguistico in Colombia con la visione di creare un ambiente di apprendimento inclusivo e di alta qualità accreditato dal Ministero dell'Istruzione.">My career began in the classroom, where I discovered the transformative power of clear communication and learner-centred teaching. In 2009, I founded a language centre in Colombia with a vision to create an inclusive, high-quality learning environment accredited by the Ministry of Education.</p>
+        <p data-en="Since 2016, I have specialised in instructional design and learning content development. This shift allowed me to scale my impact beyond one classroom to serve entire organisations, training programmes, and global teams. I discovered that the principles of learner-centred teaching apply equally to adult training, professional development, and organisational learning." data-es="Desde 2016, me he especializado en diseño instruccional y desarrollo de contenido de aprendizaje. Este cambio me permitió escalar mi impacto más allá de un aula para servir a organizaciones completas, programas de capacitación y equipos globales. Descubrí que los principios de la enseñanza centrada en el estudiante se aplican igualmente a la capacitación de adultos, el desarrollo profesional y el aprendizaje organizacional." data-it="Dal 2016 mi sono specializzata nella progettazione didattica e nello sviluppo dei contenuti educativi. Questo cambiamento mi ha permesso di scalare il mio impatto oltre una singola aula per servire interi organismi, programmi di formazione e team globali. Ho scoperto che i principi dell'insegnamento centrato sull'allievo si applicano ugualmente alla formazione degli adulti, allo sviluppo professionale e all'apprendimento organizzativo.">Since 2016, I have specialised in instructional design and learning content development. This shift allowed me to scale my impact beyond one classroom to serve entire organisations, training programmes, and global teams. I discovered that the principles of learner-centred teaching apply equally to adult training, professional development, and organisational learning.</p>
+        <p data-en="Today, I combine 13 years of classroom experience with modern design thinking and AI-assisted content creation to deliver learning experiences that are not only effective but also sustainable and scalable." data-es="Hoy en día, combino 13 años de experiencia en el aula con pensamiento de diseño moderno y creación de contenido asistida por IA para entregar experiencias de aprendizaje que no solo son efectivas sino también sostenibles y escalables." data-it="Oggi combino 13 anni di esperienza in aula con il design thinking moderno e la creazione di contenuti assistita dall'IA per fornire esperienze di apprendimento che non solo sono efficaci ma anche sostenibili e scalabili.">Today, I combine 13 years of classroom experience with modern design thinking and AI-assisted content creation to deliver learning experiences that are not only effective but also sustainable and scalable.</p>
+      </div>
+    </div>
+
+    <div id="mission" class="window">
+      <h2 data-en="Mission & Vision" data-es="Misión y Visión" data-it="Missione e Visione">Mission & Vision</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 data-en="Our Mission" data-es="Nuestra Misión" data-it="La Nostra Missione">Our Mission</h3>
+          <p data-en="To empower organisations, trainers, and learners by designing clear, engaging, and learner-centred educational content that transforms complex ideas into accessible, actionable knowledge." data-es="Empoderar a organizaciones, entrenadores y estudiantes diseñando contenido educativo claro, atractivo y centrado en el estudiante que transforma ideas complejas en conocimiento accesible y accionable." data-it="Potenziare organizzazioni, formatori e discenti progettando contenuti educativi chiari, coinvolgenti e centrati sull'allievo che trasformano idee complesse in conoscenze accessibili e attuabili.">To empower organisations, trainers, and learners by designing clear, engaging, and learner-centred educational content that transforms complex ideas into accessible, actionable knowledge.</p>
+          <p data-en="We believe that education and training should be inclusive, purposeful, and aligned with real-world outcomes. Every learner deserves content that respects their time, their learning style, and their aspirations." data-es="Creemos que la educación y la capacitación deben ser inclusivas, propositivas y alineadas con resultados del mundo real. Cada estudiante se merece contenido que respete su tiempo, su estilo de aprendizaje y sus aspiraciones." data-it="Crediamo che l'educazione e la formazione dovrebbero essere inclusive, propositive e allineate con i risultati del mondo reale. Ogni discente merita contenuti che rispettino il suo tempo, il suo stile di apprendimento e le sue aspirazioni.">We believe that education and training should be inclusive, purposeful, and aligned with real-world outcomes. Every learner deserves content that respects their time, their learning style, and their aspirations.</p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Our Vision" data-es="Nuestra Visión" data-it="La Nostra Visione">Our Vision</h3>
+          <p data-en="A world where learning is accessible, engaging, and transformative for everyone—where organisations build confident, competent, and motivated teams; where trainers have the tools and confidence to teach with clarity; and where learners of all ages and backgrounds can achieve their goals." data-es="Un mundo donde el aprendizaje es accesible, atractivo y transformador para todos—donde las organizaciones construyen equipos seguros, competentes y motivados; donde los entrenadores tienen las herramientas y la confianza para enseñar con claridad; y donde los estudiantes de todas las edades y orígenes pueden lograr sus objetivos." data-it="Un mondo dove l'apprendimento è accessibile, coinvolgente e trasformativo per tutti—dove le organizzazioni costruiscono team sicuri, competenti e motivati; dove i formatori hanno gli strumenti e la fiducia per insegnare con chiarezza; e dove i discenti di tutte le età e background possono raggiungere i loro obiettivi.">A world where learning is accessible, engaging, and transformative for everyone—where organisations build confident, competent, and motivated teams; where trainers have the tools and confidence to teach with clarity; and where learners of all ages and backgrounds can achieve their goals.</p>
+          <p data-en="By combining instructional design excellence, modern technology, and human-centred thinking, we create learning experiences that drive real change." data-es="Al combinar la excelencia en el diseño instruccional, la tecnología moderna y el pensamiento centrado en el ser humano, creamos experiencias de aprendizaje que impulsan cambios reales." data-it="Combinando l'eccellenza nella progettazione didattica, la tecnologia moderna e il pensiero incentrato sull'uomo, creiamo esperienze di apprendimento che guidano il vero cambiamento.">By combining instructional design excellence, modern technology, and human-centred thinking, we create learning experiences that drive real change.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="window">
+      <h2 data-en="Projects" data-es="Proyectos" data-it="Progetti">Projects</h2>
+
+      <div class="project-section">
+        <div class="section-title" data-en="Schools & Language Centres" data-es="Escuelas y Centros de Idiomas" data-it="Scuole e Centri Linguistici">Schools & Language Centres</div>
+        <div class="grid-3">
+          <div class="project-card featured">
+            <span class="tag" data-en="Young Learners" data-es="Estudiantes Jóvenes" data-it="Giovani Studenti">Young Learners</span>
+            <h3 data-en="Little Learners of English" data-es="Pequeños Aprendices de Inglés" data-it="Piccoli Discenti di Inglese">Little Learners of English</h3>
+            <p data-en="Trainer's guide for teaching English as a foreign language to children aged 3–8, using English as the classroom language." data-es="Guía del entrenador para enseñar inglés como lengua extranjera a niños de 3 a 8 años, usando inglés como idioma del aula." data-it="Guida dell'istruttore per insegnare l'inglese come lingua straniera ai bambini dai 3 agli 8 anni, usando l'inglese come lingua della classe.">Trainer's guide for teaching English as a foreign language to children aged 3–8, using English as the classroom language.</p>
+          </div>
+
+          <div class="project-card">
+            <span class="tag" data-en="Language Learning" data-es="Aprendizaje de Idiomas" data-it="Apprendimento Linguistico">Language Learning</span>
+            <h3 data-en="Explore the World" data-es="Explora el Mundo" data-it="Esplora il Mondo">Explore the World</h3>
+            <p data-en="A language learning programme focused on vocabulary, practical communication, and real-world exploration." data-es="Un programa de aprendizaje de idiomas enfocado en vocabulario, comunicación práctica y exploración del mundo real." data-it="Un programma di apprendimento linguistico incentrato su vocabolario, comunicazione pratica ed esplorazione del mondo reale.">A language learning programme focused on vocabulary, practical communication, and real-world exploration.</p>
+          </div>
+
+          <div class="project-card">
+            <span class="tag" data-en="Travel & Culture" data-es="Viajes y Cultura" data-it="Viaggi e Cultura">Travel & Culture</span>
+            <h3 data-en="World Voyagers" data-es="Viajeros Mundiales" data-it="Viaggiatori Mondiali">World Voyagers</h3>
+            <p data-en="An immersive language project combining travel and cultural understanding with communication practice." data-es="Un proyecto de idiomas inmersivo que combina viajes y comprensión cultural con práctica de comunicación." data-it="Un progetto linguistico immersivo che combina viaggi e comprensione culturale con pratica di comunicazione.">An immersive language project combining travel and cultural understanding with communication practice.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <div class="section-title" data-en="Training & Professional Development" data-es="Capacitación y Desarrollo Profesional" data-it="Formazione e Sviluppo Professionale">Training & Professional Development</div>
+        <div class="grid-3">
+          <div class="project-card featured">
+            <span class="tag" data-en="Teacher Development" data-es="Desarrollo de Docentes" data-it="Sviluppo Docenti">Teacher Development</span>
+            <h3 data-en="Modern Teaching Philosophies" data-es="Filosofías de Enseñanza Moderna" data-it="Filosofie dell'Insegnamento Moderno">Modern Teaching Philosophies</h3>
+            <p data-en="Professional training resource for language tutors at inlingua Terni on learner-centred, communicative teaching practice." data-es="Recurso de capacitación profesional para tutores de idiomas en inlingua Terni sobre práctica de enseñanza comunicativa centrada en el estudiante." data-it="Risorsa di formazione professionale per tutor linguistici presso inlingua Terni sulla pratica didattica comunicativa centrata sull'allievo.">Professional training resource for language tutors at inlingua Terni on learner-centred, communicative teaching practice.</p>
+          </div>
+
+          <div class="project-card">
+            <span class="tag" data-en="Fluency" data-es="Fluidez" data-it="Fluidità">Fluency</span>
+            <h3 data-en="Speak Faster" data-es="Habla Más Rápido" data-it="Parla Più Veloce">Speak Faster</h3>
+            <p data-en="An accelerated speaking programme designed to improve confidence, clarity, and fluency through structured practice." data-es="Un programa de conversación acelerado diseñado para mejorar la confianza, la claridad y la fluidez a través de la práctica estructurada." data-it="Un programma di conversazione accelerato progettato per migliorare la fiducia, la chiarezza e la fluidità attraverso la pratica strutturata.">An accelerated speaking programme designed to improve confidence, clarity, and fluency through structured practice.</p>
+          </div>
+
+          <div class="project-card">
+            <span class="tag" data-en="Professional Skills" data-es="Habilidades Profesionales" data-it="Competenze Professionali">Professional Skills</span>
+            <h3 data-en="Custom Training Solutions" data-es="Soluciones de Capacitación Personalizadas" data-it="Soluzioni di Formazione Personalizzate">Custom Training Solutions</h3>
+            <p data-en="Tailored professional development programmes for organisations focused on communication, leadership, and team skills." data-es="Programas de desarrollo profesional personalizados para organizaciones enfocados en comunicación, liderazgo y habilidades de equipo." data-it="Programmi di sviluppo professionale personalizzati per organizzazioni incentrati sulla comunicazione, la leadership e le competenze di squadra.">Tailored professional development programmes for organisations focused on communication, leadership, and team skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="window">
+      <h2 data-en="How I Can Help" data-es="Cómo Puedo Ayudar" data-it="Come Posso Aiutare">How I Can Help</h2>
+      <div class="grid-3">
+        <div class="project-card">
+          <h3 data-en="Custom Learning Design" data-es="Diseño de Aprendizaje Personalizado" data-it="Design Didattico Personalizzato">Custom Learning Design</h3>
+          <p data-en="Structured learning experiences tailored to your audience, outcomes, and delivery goals." data-es="Experiencias de aprendizaje estructuradas adaptadas a su audiencia, objetivos y metas de entrega." data-it="Esperienze di apprendimento strutturate adattate al vostro pubblico, obiettivi e risultati di consegna.">Structured learning experiences tailored to your audience, outcomes, and delivery goals.</p>
+        </div>
+        <div class="project-card">
+          <h3 data-en="Course & Manual Development" data-es="Desarrollo de Cursos y Manuales" data-it="Sviluppo Corsi e Manuali">Course & Manual Development</h3>
+          <p data-en="Clear, engaging manuals, activities, resources, and visual materials." data-es="Manuales claros y atractivos, actividades, recursos y materiales visuales." data-it="Manuali chiari e coinvolgenti, attività, risorse e materiali visivi.">Clear, engaging manuals, activities, resources, and visual materials.</p>
+        </div>
+        <div class="project-card">
+          <h3 data-en="Trainer Coordination" data-es="Coordinación de Entrenadores" data-it="Coordinamento Formatori">Trainer Coordination</h3>
+          <p data-en="Training-team coordination, project timelines, and quality assurance." data-es="Coordinación de equipos de entrenamiento, cronogramas de proyectos y garantía de calidad." data-it="Coordinamento dei team di formazione, tempistiche di progetto e garanzia della qualità.">Training-team coordination, project timelines, and quality assurance.</p>
+        </div>
+        <div class="project-card">
+          <h3 data-en="AI Content Support" data-es="Soporte de Contenido con IA" data-it="Supporto Contenuti con IA">AI Content Support</h3>
+          <p data-en="AI-powered workflows that streamline content creation without losing quality." data-es="Flujos de trabajo potenciados por IA que agilizan la creación de contenido sin perder calidad." data-it="Flussi di lavoro potenziati dall'IA che semplificano la creazione di contenuti senza perdere qualità.">AI-powered workflows that streamline content creation without losing quality.</p>
+        </div>
+        <div class="project-card">
+          <h3 data-en="Programme Strategy" data-es="Estrategia de Programas" data-it="Strategia di Programmi">Programme Strategy</h3>
+          <p data-en="Learning initiatives planned from concept to implementation with measurable outcomes." data-es="Iniciativas de aprendizaje planeadas de concepto a implementación con resultados medibles." data-it="Iniziative di apprendimento pianificate dal concetto all'implementazione con risultati misurabili.">Learning initiatives planned from concept to implementation with measurable outcomes.</p>
+        </div>
+        <div class="project-card">
+          <h3 data-en="Remote Learning Solutions" data-es="Soluciones de Aprendizaje Remoto" data-it="Soluzioni di Apprendimento Remoto">Remote Learning Solutions</h3>
+          <p data-en="Remote-ready educational materials and systems that support access and consistency." data-es="Materiales y sistemas educativos listos para remoto que apoyan el acceso y la consistencia." data-it="Materiali e sistemi educativi pronti per remoto che supportano l'accesso e la coerenza.">Remote-ready educational materials and systems that support access and consistency.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="window">
+      <div class="cta">
+        <h2 data-en="Let's Build Better Learning Experiences" data-es="Construyamos Mejores Experiencias de Aprendizaje" data-it="Costruiamo Migliori Esperienze di Apprendimento">Let's Build Better Learning Experiences</h2>
+        <p data-en="I help organisations and teams transform complex information into engaging, effective learning resources." data-es="Ayudo a organizaciones y equipos a transformar información compleja en recursos de aprendizaje efectivos y atractivos." data-it="Aiuto organizzazioni e team a trasformare informazioni complesse in risorse di apprendimento efficaci e coinvolgenti.">I help organisations and teams transform complex information into engaging, effective learning resources.</p>
+        <div class="contact-links">
+          <a href="mailto:hazbleidy0107@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/hazbleidygr/?isSelfProfile=true" class="secondary" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/hazy-boop" class="secondary" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer><div class="container">© 2026 Hazy García | Global Learning Studio</div></footer>
+
+  <footer>
+    <div class="container">© 2026 Hazy García | Global Learning Studio</div>
+  </footer>
+
+  <script>
+    const currentState = { lang: 'en' };
+
+    function updateLanguage() {
+      const lang = currentState.lang;
+      document.querySelectorAll('[data-en]').forEach((el) => {
+        const label = el.getAttribute(`data-${lang}`);
+        if (label) {
+          if (el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'LI' || el.tagName === 'BUTTON') {
+            el.textContent = label;
+          } else {
+            el.innerHTML = label;
+          }
+        }
+      });
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    function setLanguage(lang) {
+      currentState.lang = lang;
+      updateLanguage();
+    }
+
+    function showWindow(windowId) {
+      document.querySelectorAll('.window').forEach((w) => w.classList.remove('active'));
+      const target = document.getElementById(windowId);
+      if (target) target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    updateLanguage();
+  </script>
 </body>
 </html>
