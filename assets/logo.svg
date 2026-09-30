@@ -1,0 +1,15 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="20" y1="10" x2="120" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="10" y="10" width="100" height="100" rx="24" fill="url(#grad1)"/>
+  <path d="M55 34C48.3726 34 43 39.3726 43 46C43 52.6274 48.3726 58 55 58H63V76H48.5C42.1487 76 37 70.8513 37 64.5V46C37 36.0589 45.0589 28 55 28H64V34H55ZM65 34H71C77.6274 34 83 39.3726 83 46V64.5C83 70.8513 77.8513 76 71.5 76H65V70H71C74.3137 70 77 67.3137 77 64V46C77 42.6863 74.3137 40 71 40H65V34Z" fill="white"/>
+  <path d="M30 83L52 49H58L36 83H30ZM72 83L94 49H100L78 83H72Z" fill="white" opacity="0.9"/>
+
+  <text x="130" y="58" fill="#1F2937" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Hazy García</text>
+  <text x="130" y="86" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" letter-spacing="1.2">GLOBAL LEARNING STUDIO</text>
+</svg>
