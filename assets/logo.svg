@@ -1,61 +1,57 @@
 <svg width="440" height="440" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gold" x1="100" y1="70" x2="330" y2="320" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F5E1A8"/>
-      <stop offset="0.45" stop-color="#D9B76A"/>
-      <stop offset="1" stop-color="#B9872D"/>
+    <linearGradient id="gold" x1="120" y1="70" x2="312" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8E6B3"/>
+      <stop offset="0.38" stop-color="#E0C06D"/>
+      <stop offset="0.72" stop-color="#C5963E"/>
+      <stop offset="1" stop-color="#A9751F"/>
     </linearGradient>
-    <linearGradient id="navy" x1="90" y1="80" x2="340" y2="360" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#102C52"/>
-      <stop offset="1" stop-color="#0B1C36"/>
+    <linearGradient id="navy" x1="86" y1="70" x2="350" y2="349" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11325A"/>
+      <stop offset="1" stop-color="#091A2F"/>
     </linearGradient>
   </defs>
 
-  <circle cx="220" cy="220" r="182" fill="none" stroke="url(#gold)" stroke-width="9"/>
-  <circle cx="220" cy="220" r="168" fill="url(#navy)"/>
-
-  <circle cx="220" cy="220" r="164" fill="none" stroke="url(#gold)" stroke-width="2.2" stroke-dasharray="1 8" opacity="0.9"/>
+  <circle cx="220" cy="220" r="183" fill="url(#navy)"/>
+  <circle cx="220" cy="220" r="171" stroke="url(#gold)" stroke-width="3.2" opacity="0.95"/>
+  <circle cx="220" cy="220" r="156" stroke="url(#gold)" stroke-width="1.8" stroke-dasharray="2 10" opacity="0.9"/>
 
   <g opacity="0.9">
-    <circle cx="135" cy="110" r="4.5" fill="#D9B76A"/>
-    <circle cx="305" cy="110" r="4.5" fill="#D9B76A"/>
-    <circle cx="110" cy="220" r="4.5" fill="#D9B76A"/>
-    <circle cx="330" cy="220" r="4.5" fill="#D9B76A"/>
-    <circle cx="135" cy="330" r="4.5" fill="#D9B76A"/>
-    <circle cx="305" cy="330" r="4.5" fill="#D9B76A"/>
+    <circle cx="220" cy="103" r="4.6" fill="#E0C06D"/>
+    <circle cx="220" cy="337" r="4.6" fill="#E0C06D"/>
+    <circle cx="103" cy="220" r="4.6" fill="#E0C06D"/>
+    <circle cx="337" cy="220" r="4.6" fill="#E0C06D"/>
+    <circle cx="145" cy="122" r="4.2" fill="#E0C06D"/>
+    <circle cx="295" cy="122" r="4.2" fill="#E0C06D"/>
+    <circle cx="145" cy="318" r="4.2" fill="#E0C06D"/>
+    <circle cx="295" cy="318" r="4.2" fill="#E0C06D"/>
   </g>
 
-  <g stroke="url(#gold)" stroke-width="2.5" opacity="0.8">
-    <path d="M145 110H295"/>
-    <path d="M110 220H330"/>
-    <path d="M145 330H295"/>
-    <path d="M220 125V315"/>
-    <path d="M135 110L220 220L305 110"/>
-    <path d="M135 330L220 220L305 330"/>
-  </g>
-
-  <g>
-    <rect x="124" y="114" width="192" height="104" rx="12" fill="none" stroke="url(#gold)" stroke-width="4"/>
-    <text x="220" y="183" text-anchor="middle" fill="#F5E1A8" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" letter-spacing="1">HG</text>
-  </g>
-
-  <g stroke="url(#gold)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M136 250H304"/>
-    <path d="M154 250V260C154 311 186 339 220 339C254 339 286 311 286 260V250"/>
-    <path d="M164 228V248H276V228"/>
-    <path d="M170 214H270"/>
-    <path d="M120 274C120 308 153 337 188 337"/>
-    <path d="M320 274C320 308 287 337 252 337"/>
+  <g stroke="url(#gold)" stroke-width="2.2" opacity="0.8">
+    <path d="M145 122L220 220L295 122"/>
+    <path d="M145 318L220 220L295 318"/>
+    <path d="M220 103V337"/>
+    <path d="M103 220H337"/>
   </g>
 
   <g>
-    <path d="M104 278C118 292 131 303 144 311C159 320 176 326 191 329C203 332 217 333 220 333C223 333 237 332 249 329C264 326 281 320 296 311C309 303 322 292 336 278" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M158 287C181 298 203 303 220 303C237 303 259 298 282 287" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round" opacity="0.9"/>
+    <rect x="122" y="118" width="196" height="102" rx="10" fill="rgba(255,255,255,0.02)" stroke="url(#gold)" stroke-width="3.2"/>
+    <text x="220" y="182" text-anchor="middle" fill="#F5E1A8" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700">HG</text>
   </g>
 
-  <g fill="none" stroke="url(#gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
-    <path d="M160 338L170 350L180 338"/>
-    <path d="M260 338L270 350L280 338"/>
-    <path d="M220 330V350"/>
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 245H322" stroke-width="3.2"/>
+    <path d="M136 245V261C136 306 170 340 220 340C270 340 304 306 304 261V245" stroke-width="3.3"/>
+    <path d="M156 234V245H284V234" stroke-width="3.2"/>
+    <path d="M170 220H270" stroke-width="3.1"/>
+    <path d="M138 282C161 301 182 311 220 311C258 311 279 301 302 282" stroke-width="3"/>
+    <path d="M120 275C120 301 150 325 176 325" stroke-width="2.8"/>
+    <path d="M320 275C320 301 290 325 264 325" stroke-width="2.8"/>
+  </g>
+
+  <g opacity="0.9">
+    <circle cx="161" cy="349" r="5" fill="#E0C06D"/>
+    <circle cx="279" cy="349" r="5" fill="#E0C06D"/>
+    <circle cx="220" cy="355" r="5" fill="#E0C06D"/>
   </g>
 </svg>
